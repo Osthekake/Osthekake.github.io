@@ -13,120 +13,136 @@
 			<p class="lead">This is a portfolio of various games and hobby project made by me. Some of these are made for the game jam Ludum Dare, and others are not. 
 				The point of this portfolio is to collect and showcase my skills outside of work experience.</p>
 		</div>
-		
-		<h2 class="page-header">Games</h2>
-		<p class="lead">These are games that I have made, though some will probably never finish. 
-			Usually inspired by some idea for gameplay, or a desire to try some technology in a certain way.</p>
-		<ul class="list-group">
-			<li class="list-group-item">
-				<h3><a href="https://brage.bibsys.no/xmlui/bitstream/handle/11250/252480/440517_ATTACHMENT01.zip?sequence=2&isAllowed=y">Pythia</a></h4>
-				<p>My master thesis. Collaboration with another student. 
-					This is a game where you have to program Python in order to progress.
-				</p>
-				<div><i>
-					<span class="badge">java</span> 
-					<span class="badge">python</span>
-					<span class="badge">jython</span>
-				</i></div>
-			</li>
-			<li class="list-group-item">
-				<h3><a href="https://www.dropbox.com/s/1cvhbf9bg6kbqfh/Aurora-release.zip?dl=0">Aurora</a></h4>
-				<p>
-					This is a home-made graphics engine I made to experiment with shaders in GLSL. Originally I planned to make a northern 
-					lights-shader, but in the end I got distracted, and made a bunch of other shaders. <br/>
-					Needs java installed to run. Demo shows a globe with night- and day-sides and a movable light source.
-				</p>
-				<div><i>
-					<span class="badge">java</span> 
-					<span class="badge">OpenGL</span>
-					<span class="badge">GLSL</span>
-				</i></div>
-			</li>
-			<li class="list-group-item">
-				<h3><a href="http://osthekake.github.io/HexGame/main">Rotating hexes game</a></h4>
-				<p>This was made after I heard an idea someone had for a game with hexes and some sort of math problems. 
-					I thought of a better idea in my humble opinion, and this is the result of that. Created with html and javascript. 
-					Graphics are rendered on canvas, and animations are timed and programmed by hand.
-				</p>
-				<div><i>
-					<span class="badge">html</span> 
-					<span class="badge">javaScript</span>
-				</i></div>
-			</li>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" data-toggle="tab" href="#games" role="tab">Games</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" data-toggle="tab" href="#ld" role="tab">Ludum Dare</a>
+		  </li>
 		</ul>
-		
-		<h2 class="page-header">Ludum Dare</h2>
-			<p class="lead">Ludum Dare is a 48 hour game jam that happens globally, three times a year. Participants have to create an entire game, 
-			by themselves in 48 hours. I like to try to participate, but I have drifted more towards the 72 hour variant where you 
-				are allowed to work in teams over the years.</p>
-		<ul class="list-group">
-			<li class="list-group-item">
-				<h3><a href="http://ludumdare.com/compo/ludum-dare-27/?action=preview&uid=25639">Navigator</a></h3>
-				<strong>Theme: 10 seconds</strong>
-				<p>My first ever Ludum Dare entry, for LD-27. Requires that you download a jar and run locally. <br/>
-					You must have java installed in order to play. The game is created entirely from scratch by me, 
-					using nothing but the Java SDK.
-					The idea for this game was pretty good, and I plan to recreate it in a different form.
-					The link on the ludum dare site is broken. Use <a href="bit.ly/2xtHohy">this link</a> to download the jar if you want to play.
-				</p>
-				<div><i><span class="badge">java</span> <span class="badge">gimp</span></i></div>
-			</li>
-			<li class="list-group-item">
-				<h3><a href="http://ludumdare.com/compo/ludum-dare-28/?action=preview&uid=25639">A boy and his rock</a></h3>
-				<strong>Theme: You only get one</strong>
-				<p>My second Ludum Dare entry, for LD-28. Requires that you download a jar and run locally. <br/>
-					You must have java installed in order to play. The game is made using some of the code from the previous game.
-					I discovered that platform mechanics are more difficult than you would think.
-				</p>
-				<div><i><span class="badge">java</span> <span class="badge">gimp</span></i></div>
-			</li>
-			<li class="list-group-item">
-				<h3><a href="http://osthekake.github.io/LD29/main">Operation Adhesive Surface</a></h3>
-				<strong>Theme: Beneath the surface</strong>
-				<p>My first collaborative Ludum Dare entry, for LD-29. Programming, concept, rough story and art by me.
-					Use the keyboard arrows to move, and enter to select things. This is a small puzzle-adventure game, 
-					made with html and javascript. Images are rendered to canvas, and the game is very poorly optimized. 
-					It might cause your browser to use a lot of cpu.
-				</p>
-				<div><i>
-					<span class="badge">html</span> 
-					<span class="badge">javascript</span> 
-					<span class="badge">gimp</span> 
-					<span class="badge">git</span>
-				</i></div>
-			</li>
-			<li class="list-group-item">
-				<h3><a href="http://osthekake.github.io/LD30/">Connected Worlds</a></h3>
-				<strong>Theme: Connected Worlds</strong>
-				<p>Second collaborative entry for LD-30. Features a faux browser where you as the player will click around the faux internet to gather 
-					clues for a murder investigation. Not particularly self-explainatory. It is possible to gather all the clues, and win,
-					but I forgot how. <br/>
-					Uses the same kind of technology as the previous one, but doesn't have the same intensive render-loop.<br/>
-					The game placed #77 in the innovation (jam) category.
-				</p>
-				<div><i>
-					<span class="badge">html</span> 
-					<span class="badge">javascript</span> 
-					<span class="badge">gimp</span> 
-					<span class="badge">git</span>
-				</i></div>
-			</li>
-			<li class="list-group-item">
-				<h3><a href="http://osthekake.github.io/LD35/">Werewolf</a></h3>
-				<strong>Theme: Shapeshifters</strong>
-				<p>After a couple of skipped Ludum Dares, and a few where I tried to participate, but didn't deliver, I made this for LD-35.
-					The goal of this management/puzzle game is to eat or transform all the villagers. The various icons have meansings that 
-					are not at all self-explainatory, and maybe even misleading. There is some help to be had if you click along the top.<br/>
-					This is more or less a standard web-application.
-				</p>
-				<div><i>
-					<span class="badge">html</span> 
-					<span class="badge">javascript</span> 
-					<span class="badge">jQuery</span> 
-					<span class="badge">bootstrap</span>
-				</i></div>
-			</li>
-		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  	<div class="tab-pane active" id="home" role="tabpanel">
+				<h2 class="page-header">Games</h2>
+				<p class="lead">These are games that I have made, though some will probably never finish. 
+					Usually inspired by some idea for gameplay, or a desire to try some technology in a certain way.</p>
+				<ul class="list-group">
+					<li class="list-group-item">
+						<h3><a href="https://brage.bibsys.no/xmlui/bitstream/handle/11250/252480/440517_ATTACHMENT01.zip?sequence=2&isAllowed=y">Pythia</a></h4>
+						<p>My master thesis. Collaboration with another student. 
+							This is a game where you have to program Python in order to progress.
+						</p>
+						<div><i>
+							<span class="badge">java</span> 
+							<span class="badge">python</span>
+							<span class="badge">jython</span>
+						</i></div>
+					</li>
+					<li class="list-group-item">
+						<h3><a href="https://www.dropbox.com/s/1cvhbf9bg6kbqfh/Aurora-release.zip?dl=0">Aurora</a></h4>
+						<p>
+							This is a home-made graphics engine I made to experiment with shaders in GLSL. Originally I planned to make a northern 
+							lights-shader, but in the end I got distracted, and made a bunch of other shaders. <br/>
+							Needs java installed to run. Demo shows a globe with night- and day-sides and a movable light source.
+						</p>
+						<div><i>
+							<span class="badge">java</span> 
+							<span class="badge">OpenGL</span>
+							<span class="badge">GLSL</span>
+						</i></div>
+					</li>
+					<li class="list-group-item">
+						<h3><a href="http://osthekake.github.io/HexGame/main">Rotating hexes game</a></h4>
+						<p>This was made after I heard an idea someone had for a game with hexes and some sort of math problems. 
+							I thought of a better idea in my humble opinion, and this is the result of that. Created with html and javascript. 
+							Graphics are rendered on canvas, and animations are timed and programmed by hand.
+						</p>
+						<div><i>
+							<span class="badge">html</span> 
+							<span class="badge">javaScript</span>
+						</i></div>
+					</li>
+				</ul>
+			</div>
+		  	<div class="tab-pane" id="profile" role="tabpanel">
+				<h2 class="page-header">Ludum Dare</h2>
+				<p class="lead">Ludum Dare is a 48 hour game jam that happens globally, three times a year. Participants have to create an entire game, 
+				by themselves in 48 hours. I like to try to participate, but I have drifted more towards the 72 hour variant where you 
+					are allowed to work in teams over the years.</p>
+				<ul class="list-group">
+					<li class="list-group-item">
+						<h3><a href="http://ludumdare.com/compo/ludum-dare-27/?action=preview&uid=25639">Navigator</a></h3>
+						<strong>Theme: 10 seconds</strong>
+						<p>My first ever Ludum Dare entry, for LD-27. Requires that you download a jar and run locally. <br/>
+							You must have java installed in order to play. The game is created entirely from scratch by me, 
+							using nothing but the Java SDK.
+							The idea for this game was pretty good, and I plan to recreate it in a different form.
+							The link on the ludum dare site is broken. Use <a href="bit.ly/2xtHohy">this link</a> to download the jar if you want to play.
+						</p>
+						<div><i><span class="badge">java</span> <span class="badge">gimp</span></i></div>
+					</li>
+					<li class="list-group-item">
+						<h3><a href="http://ludumdare.com/compo/ludum-dare-28/?action=preview&uid=25639">A boy and his rock</a></h3>
+						<strong>Theme: You only get one</strong>
+						<p>My second Ludum Dare entry, for LD-28. Requires that you download a jar and run locally. <br/>
+							You must have java installed in order to play. The game is made using some of the code from the previous game.
+							I discovered that platform mechanics are more difficult than you would think.
+						</p>
+						<div><i><span class="badge">java</span> <span class="badge">gimp</span></i></div>
+					</li>
+					<li class="list-group-item">
+						<h3><a href="http://osthekake.github.io/LD29/main">Operation Adhesive Surface</a></h3>
+						<strong>Theme: Beneath the surface</strong>
+						<p>My first collaborative Ludum Dare entry, for LD-29. Programming, concept, rough story and art by me.
+							Use the keyboard arrows to move, and enter to select things. This is a small puzzle-adventure game, 
+							made with html and javascript. Images are rendered to canvas, and the game is very poorly optimized. 
+							It might cause your browser to use a lot of cpu.
+						</p>
+						<div><i>
+							<span class="badge">html</span> 
+							<span class="badge">javascript</span> 
+							<span class="badge">gimp</span> 
+							<span class="badge">git</span>
+						</i></div>
+					</li>
+					<li class="list-group-item">
+						<h3><a href="http://osthekake.github.io/LD30/">Connected Worlds</a></h3>
+						<strong>Theme: Connected Worlds</strong>
+						<p>Second collaborative entry for LD-30. Features a faux browser where you as the player will click around the faux internet to gather 
+							clues for a murder investigation. Not particularly self-explainatory. It is possible to gather all the clues, and win,
+							but I forgot how. <br/>
+							Uses the same kind of technology as the previous one, but doesn't have the same intensive render-loop.<br/>
+							The game placed #77 in the innovation (jam) category.
+						</p>
+						<div><i>
+							<span class="badge">html</span> 
+							<span class="badge">javascript</span> 
+							<span class="badge">gimp</span> 
+							<span class="badge">git</span>
+						</i></div>
+					</li>
+					<li class="list-group-item">
+						<h3><a href="http://osthekake.github.io/LD35/">Werewolf</a></h3>
+						<strong>Theme: Shapeshifters</strong>
+						<p>After a couple of skipped Ludum Dares, and a few where I tried to participate, but didn't deliver, I made this for LD-35.
+							The goal of this management/puzzle game is to eat or transform all the villagers. The various icons have meansings that 
+							are not at all self-explainatory, and maybe even misleading. There is some help to be had if you click along the top.<br/>
+							This is more or less a standard web-application.
+						</p>
+						<div><i>
+							<span class="badge">html</span> 
+							<span class="badge">javascript</span> 
+							<span class="badge">jQuery</span> 
+							<span class="badge">bootstrap</span>
+						</i></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+				
 	</div>
 </body>
 </html>
