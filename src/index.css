@@ -1,0 +1,341 @@
+/* You can place any custom styles here. Bootstrap is loaded via CDN. */
+
+/* Jumbotron header */
+.jumbotron-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.jumbotron-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.jumbotron-right .img-thumbnail {
+    margin: 0;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    color: #495057;
+    text-decoration: underline;
+}
+
+.github-icon {
+    flex-shrink: 0;
+}
+
+.jumbotron-header h1 {
+    margin: 0;
+    flex: 1;
+}
+
+/* Vertical timeline */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 0; /* flush; items will offset themselves */
+    list-style: none; /* remove default bullets */
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    left: 0.5rem; /* add space on the left */
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.075);
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    padding: 1rem 1.25rem;
+    margin-left: 2rem; /* offset from rail */
+}
+
+/* Remove bullet dots; use a subtle connector instead */
+.timeline-item:before { content: none; }
+.timeline-item:after {
+    content: "";
+    position: absolute;
+    left: -1.125rem; /* connect to rail at 0.5rem + 6px */
+    top: 1.25rem; /* roughly aligns with header */
+    width: 1.125rem;
+    height: 2px;
+    background: rgba(0,0,0,0.1);
+}
+
+/* Year separators */
+.timeline-year {
+    position: relative;
+    margin: 2rem 0 1rem 2rem;
+    font-weight: 700;
+    color: #6c757d; /* bootstrap secondary */
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.timeline-year:before {
+    content: none; /* no bullet */
+}
+.timeline-year:after {
+    content: "";
+    position: absolute;
+    left: -1.125rem;
+    top: 50%;
+    width: 1.125rem;
+    height: 2px;
+    background: rgba(0,0,0,0.1);
+    transform: translateY(-50%);
+}
+
+/* Make badges in a row with small gap */
+.timeline-item .badge {
+    margin-right: 0.25rem;
+    background: #f1f3f5;
+    color: #343a40;
+    border-radius: 999px;
+    padding: .25rem .5rem;
+    font-weight: 500;
+}
+
+/* Prefer smaller padding on item bodies to look timeline-like */
+.timeline-item.list-group-item {
+    border-color: rgba(0,0,0,0.075);
+}
+
+/* Header row inside item: title on left, date pill on right */
+.timeline-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+.timeline-title {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.timeline-title h3 {
+    margin: 0;
+}
+
+.timeline-category {
+    background: #fff3cd;
+    color: #b76e00;
+    border-radius: 999px;
+    padding: .125rem .6rem;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 600;
+}
+
+.timeline-category--theme {
+    background: #e0f7ff;
+    color: #036b9c;
+}
+
+.timeline-date {
+    background: #e7f1ff;
+    color: #0d6efd;
+    border-radius: 999px;
+    padding: .125rem .5rem;
+    font-size: .8rem;
+}
+
+/* Modal */
+.portfolio-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 1050;
+}
+
+.portfolio-modal {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: .75rem;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+    padding: 2rem;
+}
+
+.portfolio-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    line-height: 1;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.portfolio-modal-header {
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-modal-header h2 {
+    margin-bottom: .5rem;
+}
+
+.portfolio-modal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: center;
+}
+
+.portfolio-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-modal-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.portfolio-modal-gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+}
+
+.portfolio-gallery-figure {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #f8f9fa;
+}
+
+.portfolio-modal-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-modal-gallery figcaption {
+    font-size: .8rem;
+    color: #6c757d;
+    padding: .5rem .75rem;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #fff;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    z-index: 10;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.9);
+    outline: none;
+}
+
+.gallery-nav:focus {
+    outline: none;
+}
+
+.gallery-nav--prev {
+    left: 1rem;
+}
+
+.gallery-nav--next {
+    right: 1rem;
+}
+
+.gallery-nav:hover {
+    color: #fff;
+    transform: translateY(-50%) scale(1.15);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 0 3px rgba(0, 0, 0, 1);
+}
+
+.gallery-indicator {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: .25rem .75rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    color: #495057;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.link-dead-note {
+    color: #dc3545;
+    font-style: italic;
+    font-size: .85rem;
+}
+
+.portfolio-link-dead {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #6c757d;
+    border-color: #ced4da;
+    background-color: transparent;
+}
+
+
