@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import LudumDareTheme from './LudumDareTheme.jsx';
+import StatusPill from './StatusPill.jsx';
 
 export default function PortfolioModal({ item, onClose }) {
 	const [currentShot, setCurrentShot] = useState(0);
@@ -46,7 +48,9 @@ export default function PortfolioModal({ item, onClose }) {
 					<h2 id="portfolio-modal-title">{item.title}</h2>
 					<div className="portfolio-modal-meta">
 						{item.category ? (<span className="timeline-category">{item.category}</span>) : null}
-						{item.theme ? (<span className="timeline-category timeline-category--theme">Theme: {item.theme}</span>) : null}
+						<LudumDareTheme theme={item.theme} />
+						<StatusPill type="recommended">{item.recommended ? 'Recommended' : null}</StatusPill>
+						<StatusPill type="playable">{item.playable ? 'Playable' : null}</StatusPill>
 						{item.date ? (<span className="timeline-date">{new Date(item.date).toLocaleDateString('en-GB')}</span>) : null}
 					</div>
 				</header>

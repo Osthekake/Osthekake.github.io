@@ -17,6 +17,10 @@ import angularSmithScreenshot2 from '../screenshots/Angular Smith/2.png';
 import angularSmithScreenshot3 from '../screenshots/Angular Smith/3.png';
 import chemistScreenshot0 from '../screenshots/Chemist/0.png';
 import chemistScreenshot1 from '../screenshots/Chemist/1.png';
+import xordScreenshot0 from '../screenshots/Xord/0.png';
+import rtsGameScreenshot0 from '../screenshots/RTS Game/0.png';
+import ordersGameScreenshot0 from '../screenshots/Orders Game/0.png';
+import hiscoreScreenshot0 from '../screenshots/HISCORE/0.png';
 
 export default function App() {
 	const [selectedItem, setSelectedItem] = useState(null);
@@ -46,6 +50,8 @@ export default function App() {
                 badges: ["react", "typescript", "robot3"],
                 date: "2024-09-15",
                 category: "Other Project",
+                recommended: true,
+                playable: true,
                 screenshots: [
                     {
                         src: chemistScreenshot0,
@@ -71,6 +77,8 @@ export default function App() {
                 badges: ["angular", "typescript", "piskel"],
                 date: "2022-06-13",
                 category: "Other Project",
+                recommended: true,
+                playable: true,
                 screenshots: [
                     {
                         src: angularSmithScreenshot0,
@@ -106,6 +114,7 @@ export default function App() {
                 badges: ["angular", "typescript", "svg"],
                 date: "2022-06-20",
                 category: "Other Project",
+                playable: true,
                 screenshots: [
                     {
                         src: angularNavigatorScreenshot,
@@ -125,6 +134,7 @@ export default function App() {
 				badges: ["javascript", "typescript", "excaliburjs"],
 				date: "2018-08-13",
 				category: "Ludum Dare",
+                playable: true,
 				screenshots: [
 					{
 						src: outOfSpaceScreenshot,
@@ -146,6 +156,8 @@ export default function App() {
 				badges: ["html", "javascript", "jQuery", "bootstrap"],
 				date: "2016-04-18",
 				category: "Ludum Dare",
+				recommended: true,
+				playable: true,
 				screenshots: [
 					{
 						src: werewolfScreenshot0,
@@ -168,6 +180,7 @@ export default function App() {
 				href: "http://osthekake.github.io/LD30/",
 				title: "Connected Worlds",
 				theme: "Connected Worlds",
+                playable: true,
 				badges: ["html", "javascript", "gimp", "git"],
 				date: "2014-08-25",
 				category: "Ludum Dare",
@@ -195,7 +208,7 @@ export default function App() {
 				title: "Aurora",
 				linkNote: true,
 				badges: ["java", "OpenGL", "GLSL"],
-				date: "2014-12-19",
+				date: "2011-12-19",
 				category: "Other Project",
 				children: (
 					<p>
@@ -209,6 +222,7 @@ export default function App() {
 				href: "http://osthekake.github.io/LD29/main",
 				title: "Operation Adhesive Surface",
 				theme: "Beneath the surface",
+                playable: true,
 				badges: ["html", "javascript", "gimp", "git"],
 				date: "2014-04-28",
 				category: "Ludum Dare",
@@ -258,15 +272,83 @@ export default function App() {
 						You must have java installed in order to play. The game is created entirely from scratch by me, 
 						using nothing but the Java SDK.
 						The idea for this game was pretty good, and I plan to recreate it in a different form.
-						The link on the ludum dare site is broken. Use <a href="http://bit.ly/2xtHohy">this link</a> to download the jar if you want to play.
+						(Later recreated as a pure javascript game in 2022)
 					</p>
 				)
+			},
+			{
+				href: "https://osthekake.github.io/hiscore/",
+				title: "HISCORE",
+				badges: ["Typescript"],
+				date: "2024-09-06",
+				category: "Other Project",
+				children: (
+					<p>A retro highscore table based on a json file. Created for Funktive stand at TDC 2024.</p>
+				),
+				screenshots: [
+                    {
+                        src: hiscoreScreenshot0,
+                        alt: "HISCORE demo"
+                    }
+                ],
+			},
+			{
+				href: "https://osthekake.github.io/xord/",
+				title: "Xord",
+				badges: ["react"],
+				date: "2025-04-18",
+				category: "Other Project",
+				children: (
+					<p>Created a crossword for a scavenger hunt for niece and nephiews. The whole thing was made in an evening.</p>
+				),
+				screenshots: [
+                    {
+                        src: xordScreenshot0,
+                        alt: "Xord crossword"
+                    }
+                ],
+			},
+			{
+				href: "",
+				title: "RTS Game",
+				linkNote: true,
+				badges: ["react", "typescript"],
+				date: "2023-06-20",
+				category: "Other Project",
+				children: (
+					<p>Prototype of a RTS game. Made with React and TypeScript. The game features procedurally generated maps. Never got as far as to actually work on the concept I had in mind.</p>
+				),
+				screenshots: [
+					{
+						src: rtsGameScreenshot0,
+						alt: "Example generated map"
+					},
+				],
+			},
+			{
+				href: "",
+				title: "Map Generator",
+				linkNote: true,
+				badges: ["Scala"],
+				date: "2021-04-07",
+				category: "Other Project",
+				children: (
+					<p>Generated height maps with humidity and elevation. Features rivers and lakes, and a primitive lighting system.</p>
+				),
+				screenshots: [
+					{
+						src: ordersGameScreenshot0,
+						alt: "Example generated map"
+					},
+				],
 			},
 			{
 				href: "http://osthekake.github.io/HexGame/main",
 				title: "Rotating hexes game",
 				badges: ["html", "javaScript"],
 				date: "2015-05-01",
+				recommended: true,
+				playable: true,
 				category: "Other Project",
 				screenshots: [
 					{
