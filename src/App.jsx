@@ -20,7 +20,7 @@ import chemistScreenshot1 from '../screenshots/Chemist/1.png';
 import xordScreenshot0 from '../screenshots/Xord/0.png';
 import rtsGameScreenshot0 from '../screenshots/RTS Game/0.png';
 import ordersGameScreenshot0 from '../screenshots/Orders Game/0.png';
-import hiscoreScreenshot0 from '../screenshots/HISCORE/0.png';
+import hiscoreScreenshot0 from '../screenshots/Hiscore/0.png';
 
 export default function App() {
 	const [selectedItem, setSelectedItem] = useState(null);
