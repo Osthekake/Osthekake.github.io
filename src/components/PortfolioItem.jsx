@@ -30,7 +30,6 @@ export default function PortfolioItem({ href, title, theme, linkNote, badges = [
 			<div className="timeline-header">
 				<div className="timeline-title">
 					<h3><a href={href} onClick={handleItemClick}>{title}</a></h3>
-					{category ? (<span className="timeline-category">{category}</span>) : null}
 					<StatusPill type="recommended">{recommended ? 'Recommended' : null}</StatusPill>
 					<StatusPill type="playable">{playable ? 'Playable' : null}</StatusPill>
 				</div>

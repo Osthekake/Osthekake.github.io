@@ -2,26 +2,6 @@ import React, { useMemo, useState } from 'react';
 import Timeline from './components/Timeline.jsx';
 import PortfolioModal from './components/PortfolioModal.jsx';
 
-import outOfSpaceScreenshot from '../screenshots/Out of space/0.png';
-import werewolfScreenshot0 from '../screenshots/Werewolf/0.png';
-import werewolfScreenshot1 from '../screenshots/Werewolf/1.png';
-import connectedWorldsScreenshot0 from '../screenshots/Connected worlds/0.png';
-import connectedWorldsScreenshot1 from '../screenshots/Connected worlds/1.png';
-import operationAdhesiveScreenshot0 from '../screenshots/Adhesive Surface/0.png';
-import operationAdhesiveScreenshot1 from '../screenshots/Adhesive Surface/1.png';
-import rotatingHexesScreenshot from '../screenshots/Rotating Hexes/0.png';
-import angularNavigatorScreenshot from '../screenshots/Navigator Remake/0.png';
-import angularSmithScreenshot0 from '../screenshots/Angular Smith/0.png';
-import angularSmithScreenshot1 from '../screenshots/Angular Smith/1.png';
-import angularSmithScreenshot2 from '../screenshots/Angular Smith/2.png';
-import angularSmithScreenshot3 from '../screenshots/Angular Smith/3.png';
-import chemistScreenshot0 from '../screenshots/Chemist/0.png';
-import chemistScreenshot1 from '../screenshots/Chemist/1.png';
-import xordScreenshot0 from '../screenshots/Xord/0.png';
-import rtsGameScreenshot0 from '../screenshots/RTS Game/0.png';
-import ordersGameScreenshot0 from '../screenshots/Orders Game/0.png';
-import hiscoreScreenshot0 from '../screenshots/Hiscore/0.png';
-
 export default function App() {
 	const [selectedItem, setSelectedItem] = useState(null);
 
@@ -35,7 +15,10 @@ export default function App() {
                 date: "2025-09-18",
                 category: "Other Project",
                 screenshots: [
-                    
+                    {
+                        src: '/screenshots/RPG Game/0.gif',
+                        alt: "RPG Game gameplay"
+                    }
                 ],
                 children: (
                     <p>
@@ -54,11 +37,11 @@ export default function App() {
                 playable: true,
                 screenshots: [
                     {
-                        src: chemistScreenshot0,
+                        src: '/screenshots/Chemist/0.png',
                         alt: "Chemist main menu"
                     },
                     {
-                        src: chemistScreenshot1,
+                        src: '/screenshots/Chemist/1.png',
                         alt: "Chemist gameplay"
                     }
                 ],
@@ -81,19 +64,19 @@ export default function App() {
                 playable: true,
                 screenshots: [
                     {
-                        src: angularSmithScreenshot0,
+                        src: '/screenshots/Angular Smith/0.png',
                         alt: "Angular Smith main menu"
                     },
                     {
-                        src: angularSmithScreenshot1,
+                        src: '/screenshots/Angular Smith/1.png',
                         alt: "Angular Smith gameplay"
                     },
                     {
-                        src: angularSmithScreenshot2,
+                        src: '/screenshots/Angular Smith/2.png',
                         alt: "Angular Smith gameplay"
                     },
                     {
-                        src: angularSmithScreenshot3,
+                        src: '/screenshots/Angular Smith/3.png',
                         alt: "Angular Smith gameplay"
                     }
                 ],
@@ -117,7 +100,7 @@ export default function App() {
                 playable: true,
                 screenshots: [
                     {
-                        src: angularNavigatorScreenshot,
+                        src: '/screenshots/Navigator Remake/0.png',
                         alt: "Angular Navigator gameplay"
                     }
                 ],
@@ -137,7 +120,7 @@ export default function App() {
                 playable: true,
 				screenshots: [
 					{
-						src: outOfSpaceScreenshot,
+						src: '/screenshots/Out of space/0.png',
 						alt: "Out of Space Inc gameplay"
 					}
 				],
@@ -160,17 +143,17 @@ export default function App() {
 				playable: true,
 				screenshots: [
 					{
-						src: werewolfScreenshot0,
+						src: '/screenshots/Werewolf/0.png',
 						alt: "Werewolf management view"
 					},
 					{
-						src: werewolfScreenshot1,
+						src: '/screenshots/Werewolf/1.png',
 						alt: "Werewolf night cycle"
 					}
 				],
 				children: (
 					<p>After a couple of skipped Ludum Dares, and a few where I tried to participate, but didn't deliver, I made this for LD-35.
-						The goal of this management/puzzle game is to eat or transform all the villagers. The various icons have meansings that 
+						The goal of this management/puzzle game is to eat or transform all the villagers. The various icons have meanings that 
 						are not at all self-explainatory, and maybe even misleading. There is some help to be had if you click along the top.<br/>
 						This is more or less a standard web-application.
 					</p>
@@ -186,11 +169,11 @@ export default function App() {
 				category: "Ludum Dare",
 				screenshots: [
 					{
-						src: connectedWorldsScreenshot0,
+						src: '/screenshots/Connected worlds/0.png',
 						alt: "Connected Worlds faux browser"
 					},
 					{
-						src: connectedWorldsScreenshot1,
+						src: '/screenshots/Connected worlds/1.png',
 						alt: "Connected Worlds clue interface"
 					}
 				],
@@ -228,11 +211,11 @@ export default function App() {
 				category: "Ludum Dare",
 				screenshots: [
 					{
-						src: operationAdhesiveScreenshot0,
+						src: '/screenshots/Adhesive Surface/0.png',
 						alt: "Operation Adhesive Surface dialogue"
 					},
 					{
-						src: operationAdhesiveScreenshot1,
+						src: '/screenshots/Adhesive Surface/1.png',
 						alt: "Operation Adhesive Surface gameplay"
 					}
 				],
@@ -271,8 +254,7 @@ export default function App() {
 					<p>My first ever Ludum Dare entry, for LD-27. Requires that you download a jar and run locally. <br/>
 						You must have java installed in order to play. The game is created entirely from scratch by me, 
 						using nothing but the Java SDK.
-						The idea for this game was pretty good, and I plan to recreate it in a different form.
-						(Later recreated as a pure javascript game in 2022)
+						The idea for this game was pretty good, and I later recreated it as a pure javascript game in 2022.
 					</p>
 				)
 			},
@@ -287,7 +269,7 @@ export default function App() {
 				),
 				screenshots: [
                     {
-                        src: hiscoreScreenshot0,
+                        src: '/screenshots/Hiscore/0.png',
                         alt: "HISCORE demo"
                     }
                 ],
@@ -303,7 +285,7 @@ export default function App() {
 				),
 				screenshots: [
                     {
-                        src: xordScreenshot0,
+                        src: '/screenshots/Xord/0.png',
                         alt: "Xord crossword"
                     }
                 ],
@@ -320,7 +302,7 @@ export default function App() {
 				),
 				screenshots: [
 					{
-						src: rtsGameScreenshot0,
+						src: '/screenshots/RTS Game/0.png',
 						alt: "Example generated map"
 					},
 				],
@@ -337,7 +319,7 @@ export default function App() {
 				),
 				screenshots: [
 					{
-						src: ordersGameScreenshot0,
+						src: '/screenshots/Orders Game/0.png',
 						alt: "Example generated map"
 					},
 				],
@@ -352,7 +334,7 @@ export default function App() {
 				category: "Other Project",
 				screenshots: [
 					{
-						src: rotatingHexesScreenshot,
+						src: '/screenshots/Rotating Hexes/0.png',
 						alt: "Rotating hexes game board"
 					}
 				],
@@ -370,6 +352,20 @@ export default function App() {
 				badges: ["java", "python", "jython"],
 				date: "2010-06-01",
 				category: "Other Project",
+				screenshots: [
+					{
+						src: '/screenshots/Pythia/0.png',
+						alt: "Pythia gameplay"
+					},
+					{
+						src: '/screenshots/Pythia/1.png',
+						alt: "Pythia gameplay"
+					},
+					{
+						src: '/screenshots/Pythia/3.png',
+						alt: "Pythia gameplay"
+					}
+				],
 				children: (
 					<p>My master thesis. Collaboration with another student. 
 						This is a game where you have to program Python in order to progress.
@@ -403,6 +399,7 @@ export default function App() {
 				<p className="lead">This is a portfolio of various games and hobby project made by me. Some of these are made for the game jam Ludum Dare, and others are not. 
 					The point of this portfolio is to collect and showcase my skills outside of work experience.</p>
 				<p className="lead">Ludum Dare is a 48 hour game jam that happens globally, three times a year. Participants have to create an entire game by themselves in 48 hours. In later years I have joined the 72 hour jam, which allows for collaboration.</p>
+				<p className="lead">Unfortunately, I have lost some of the binaries and screenshots for older Ludum Dare entries, as the file hosting service I used for them has been discontinued.</p>
 				<p className="text-muted">Alongside jam entries, I experiment with other gameplay ideas and technology prototypes.</p>
 			</div>
 			<Timeline items={timelineItems} onSelect={setSelectedItem} />

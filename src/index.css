@@ -1,5 +1,11 @@
 /* You can place any custom styles here. Bootstrap is loaded via CDN. */
 
+/* Jumbotron styling */
+.jumbotron {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
 /* Jumbotron header */
 .container {
     position: relative;

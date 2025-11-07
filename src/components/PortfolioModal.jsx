@@ -47,7 +47,6 @@ export default function PortfolioModal({ item, onClose }) {
 				<header className="portfolio-modal-header">
 					<h2 id="portfolio-modal-title">{item.title}</h2>
 					<div className="portfolio-modal-meta">
-						{item.category ? (<span className="timeline-category">{item.category}</span>) : null}
 						<LudumDareTheme theme={item.theme} />
 						<StatusPill type="recommended">{item.recommended ? 'Recommended' : null}</StatusPill>
 						<StatusPill type="playable">{item.playable ? 'Playable' : null}</StatusPill>
