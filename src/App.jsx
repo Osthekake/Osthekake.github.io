@@ -39,7 +39,7 @@ export default function App() {
                 ],
                 children: (
                     <p>
-                        This is a multiplayer RPG game inspired by online tabletop systems like Roll20. It has a frontend and a backend compoenent, and a shared library between them. Communication between the two is done through websockets.
+                        This is a multiplayer RPG game inspired by online tabletop systems like Roll20. It has a frontend and a backend component, and a shared library between them. Communication between the two is done through websockets.
                         There is no playable version of the game yet, but I have a working prototype.
                     </p>
                 )
@@ -299,7 +299,7 @@ export default function App() {
 				date: "2025-04-18",
 				category: "Other Project",
 				children: (
-					<p>Created a crossword for a scavenger hunt for niece and nephiews. The whole thing was made in an evening.</p>
+					<p>Created a crossword for a scavenger hunt for niece and nephews. The whole thing was made in an evening.</p>
 				),
 				screenshots: [
                     {
