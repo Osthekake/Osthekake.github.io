@@ -1,9 +1,18 @@
 import React, { useMemo, useState } from 'react';
 import Timeline from './components/Timeline.jsx';
 import PortfolioModal from './components/PortfolioModal.jsx';
+import TimelineFilter from './components/TimelineFilter.jsx';
 
 export default function App() {
 	const [selectedItem, setSelectedItem] = useState(null);
+	const [showAll, setShowAll] = useState(false);
+	const [filters, setFilters] = useState({
+		recommended: false,
+		playable: true,
+		lowEffort: false,
+		screenshotOnly: false,
+		currentlyUnavailable: false
+	});
 
 	const timelineItems = useMemo(() => (
 		[
@@ -56,7 +65,7 @@ export default function App() {
             },
             {
                 href: "https://osthekake.github.io/angular-smith/",
-                title: "Angular Smith",
+                title: "Bear Smith",
                 badges: ["angular", "typescript", "piskel"],
                 date: "2022-06-13",
                 category: "Other Project",
@@ -64,20 +73,20 @@ export default function App() {
                 playable: true,
                 screenshots: [
                     {
-                        src: '/screenshots/Angular Smith/0.png',
-                        alt: "Angular Smith main menu"
+                        src: '/screenshots/Bear Smith/0.png',
+                        alt: "Bear Smith main menu"
                     },
                     {
-                        src: '/screenshots/Angular Smith/1.png',
-                        alt: "Angular Smith gameplay"
+                        src: '/screenshots/Bear Smith/1.png',
+                        alt: "Bear Smith gameplay"
                     },
                     {
-                        src: '/screenshots/Angular Smith/2.png',
-                        alt: "Angular Smith gameplay"
+                        src: '/screenshots/Bear Smith/2.png',
+                        alt: "Bear Smith gameplay"
                     },
                     {
-                        src: '/screenshots/Angular Smith/3.png',
-                        alt: "Angular Smith gameplay"
+                        src: '/screenshots/Bear Smith/3.png',
+                        alt: "Bear Smith gameplay"
                     }
                 ],
                 children: (
@@ -190,6 +199,7 @@ export default function App() {
 				href: "https://www.dropbox.com/s/1cvhbf9bg6kbqfh/Aurora-release.zip?dl=0",
 				title: "Aurora",
 				linkNote: true,
+				currentlyUnavailable: true,
 				badges: ["java", "OpenGL", "GLSL"],
 				date: "2011-12-19",
 				category: "Other Project",
@@ -232,6 +242,7 @@ export default function App() {
 				title: "A boy and his rock",
 				theme: "You only get one",
 				linkNote: true,
+				currentlyUnavailable: true,
 				badges: ["java", "gimp"],
 				date: "2013-12-15",
 				category: "Ludum Dare",
@@ -247,6 +258,7 @@ export default function App() {
 				title: "Navigator",
 				theme: "10 seconds",
 				linkNote: true,
+				currentlyUnavailable: true,
 				badges: ["java", "gimp"],
 				date: "2013-08-25",
 				category: "Ludum Dare",
@@ -264,6 +276,7 @@ export default function App() {
 				badges: ["Typescript"],
 				date: "2024-09-06",
 				category: "Other Project",
+				lowEffort: true,
 				children: (
 					<p>A retro highscore table based on a json file. Created for Funktive stand at TDC 2024.</p>
 				),
@@ -280,6 +293,7 @@ export default function App() {
 				badges: ["react"],
 				date: "2025-04-18",
 				category: "Other Project",
+				lowEffort: true,
 				children: (
 					<p>Created a crossword for a scavenger hunt for niece and nephews. The whole thing was made in an evening.</p>
 				),
@@ -375,6 +389,42 @@ export default function App() {
 		].sort((a, b) => new Date(b.date) - new Date(a.date))
 	), []);
 
+	const filteredItems = useMemo(() => {
+		if (showAll) {
+			return timelineItems;
+		}
+
+		const hasActiveFilters = Object.values(filters).some(v => v);
+		if (!hasActiveFilters) {
+			return timelineItems;
+		}
+
+		return timelineItems.filter(item => {
+			const isLinkDead = Boolean(item.linkNote) || !item.href || item.href.trim() === '';
+			const hasScreenshotOnly = isLinkDead && !item.currentlyUnavailable;
+
+			// If any filter is active, the item must match at least one active filter
+			if (filters.recommended && item.recommended) return true;
+			if (filters.playable && item.playable) return true;
+			if (filters.lowEffort && item.lowEffort) return true;
+			if (filters.screenshotOnly && hasScreenshotOnly) return true;
+			if (filters.currentlyUnavailable && item.currentlyUnavailable) return true;
+
+			return false;
+		});
+	}, [timelineItems, filters, showAll]);
+
+	const handleFilterChange = (key, value) => {
+		setFilters(prev => ({
+			...prev,
+			[key]: value
+		}));
+	};
+
+	const handleShowAllChange = (value) => {
+		setShowAll(value);
+	};
+
 	return (
 		<div className="container">
 			<div className="jumbotron-header">
@@ -402,7 +452,13 @@ export default function App() {
 				<p className="lead">Unfortunately, I have lost some of the binaries and screenshots for older Ludum Dare entries, as the file hosting service I used for them has been discontinued.</p>
 				<p className="text-muted">Alongside jam entries, I experiment with other gameplay ideas and technology prototypes.</p>
 			</div>
-			<Timeline items={timelineItems} onSelect={setSelectedItem} />
+			<TimelineFilter 
+				filters={filters} 
+				showAll={showAll}
+				onFilterChange={handleFilterChange} 
+				onShowAllChange={handleShowAllChange}
+			/>
+			<Timeline items={filteredItems} onSelect={setSelectedItem} />
 			<PortfolioModal item={selectedItem} onClose={() => setSelectedItem(null)} />
 		</div>
 	);

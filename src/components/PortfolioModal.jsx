@@ -19,7 +19,7 @@ export default function PortfolioModal({ item, onClose }) {
 		}
 	};
 
-	const isLinkDead = Boolean(item.linkNote);
+	const isLinkDead = Boolean(item.linkNote) || !item.href || item.href.trim() === '';
 	const handleVisitClick = (event) => {
 		if (isLinkDead) {
 			event.preventDefault();
@@ -41,27 +41,24 @@ export default function PortfolioModal({ item, onClose }) {
 	return (
 		<div className="portfolio-modal-backdrop" onClick={handleBackdropClick}>
 			<div className="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="portfolio-modal-title">
-				<button type="button" className="portfolio-modal-close" onClick={onClose} aria-label="Close">
-					&times;
-				</button>
 				<header className="portfolio-modal-header">
-					<h2 id="portfolio-modal-title">{item.title}</h2>
-					<div className="portfolio-modal-meta">
-						<LudumDareTheme theme={item.theme} />
-						<StatusPill type="recommended">{item.recommended ? 'Recommended' : null}</StatusPill>
-						<StatusPill type="playable">{item.playable ? 'Playable' : null}</StatusPill>
-						{item.date ? (<span className="timeline-date">{new Date(item.date).toLocaleDateString('en-GB')}</span>) : null}
+					<div className="portfolio-modal-header-content">
+						<h2 id="portfolio-modal-title">{item.title}</h2>
+						<div className="portfolio-modal-meta">
+							<LudumDareTheme theme={item.theme} />
+							<StatusPill type="recommended">{item.recommended ? 'Recommended' : null}</StatusPill>
+							<StatusPill type="playable">{item.playable ? 'Playable' : null}</StatusPill>
+							<StatusPill type="low-effort">{item.lowEffort ? 'Low Effort' : null}</StatusPill>
+							<StatusPill type="screenshot-only">{isLinkDead && !item.currentlyUnavailable ? 'screenshot only' : null}</StatusPill>
+							<StatusPill type="currently-unavailable">{item.currentlyUnavailable ? 'currently unavailable' : null}</StatusPill>
+							{item.date ? (<span className="timeline-date">{new Date(item.date).toLocaleDateString('en-GB')}</span>) : null}
+						</div>
 					</div>
+					<button type="button" className="portfolio-modal-close" onClick={onClose} aria-label="Close">
+						&times;
+					</button>
 				</header>
 				<div className="portfolio-modal-body">
-					{item.children}
-					{item.badges && item.badges.length ? (
-						<div className="portfolio-modal-badges">
-							{item.badges.map((badge, index) => (
-								<span key={index} className="badge">{badge}</span>
-							))}
-						</div>
-					) : null}
 					{activeShot ? (
 						<section className="portfolio-modal-gallery" aria-label="Project screenshots">
 							<figure className="portfolio-gallery-figure">
@@ -82,6 +79,14 @@ export default function PortfolioModal({ item, onClose }) {
 								) : null}
 							</figure>
 						</section>
+					) : null}
+					{item.children}
+					{item.badges && item.badges.length ? (
+						<div className="portfolio-modal-badges">
+							{item.badges.map((badge, index) => (
+								<span key={index} className="badge">{badge}</span>
+							))}
+						</div>
 					) : null}
 				</div>
 				<div className="portfolio-modal-footer">

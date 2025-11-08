@@ -2,7 +2,9 @@
 import LudumDareTheme from './LudumDareTheme.jsx';
 import StatusPill from './StatusPill.jsx';
  
-export default function PortfolioItem({ href, title, theme, linkNote, badges = [], date, category, children, onSelect, recommended, playable }) {
+export default function PortfolioItem({ href, title, theme, linkNote, badges = [], date, category, children, onSelect, recommended, playable, currentlyUnavailable, lowEffort }) {
+	const isLinkDead = Boolean(linkNote) || !href || href.trim() === '';
+	
 	const handleItemClick = (event) => {
 		if (onSelect) {
 			event.preventDefault();
@@ -32,6 +34,9 @@ export default function PortfolioItem({ href, title, theme, linkNote, badges = [
 					<h3><a href={href} onClick={handleItemClick}>{title}</a></h3>
 					<StatusPill type="recommended">{recommended ? 'Recommended' : null}</StatusPill>
 					<StatusPill type="playable">{playable ? 'Playable' : null}</StatusPill>
+					<StatusPill type="low-effort">{lowEffort ? 'Low Effort' : null}</StatusPill>
+					<StatusPill type="screenshot-only">{isLinkDead && !currentlyUnavailable ? 'screenshot only' : null}</StatusPill>
+					<StatusPill type="currently-unavailable">{currentlyUnavailable ? 'currently unavailable' : null}</StatusPill>
 				</div>
 				{date ? (<span className="timeline-date">{new Date(date).toLocaleDateString('en-GB')}</span>) : null}
 			</div>

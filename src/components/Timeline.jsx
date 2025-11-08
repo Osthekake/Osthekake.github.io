@@ -25,6 +25,8 @@ export default function Timeline({ items, onSelect }) {
 								category={item.category}
 								recommended={item.recommended}
 								playable={item.playable}
+								currentlyUnavailable={item.currentlyUnavailable}
+								lowEffort={item.lowEffort}
 								onSelect={onSelect ? () => onSelect(item) : undefined}
 							>
 								{item.children}
