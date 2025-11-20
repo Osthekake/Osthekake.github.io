@@ -104,7 +104,7 @@ export default function ArtGallery() {
 		},
 		{
 			name: "Leaf study",
-			description: "Studies of leaves in various styles and techniques.",
+			description: "Studies of leaves done with the paint brush in Photoshop.",
 			images: [
 				{
 					src: "/leaf_by_osthekake_df73h9-fullview.jpg",
