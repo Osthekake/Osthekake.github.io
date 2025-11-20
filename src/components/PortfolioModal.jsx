@@ -77,6 +77,7 @@ export default function PortfolioModal({ item, onClose }) {
 								{hasMultipleShots ? (
 									<div className="gallery-indicator">{currentShot + 1} / {screenshots.length}</div>
 								) : null}
+								<p className="copyright copyright--modal">© {new Date().getFullYear()} Andreas Johnsen. All rights reserved.</p>
 							</figure>
 						</section>
 					) : null}

@@ -37,15 +37,18 @@ export default function ArtGallery() {
 				},
 				{
 					src: "/blueprint.png",
-					description: "I wanted to hang this inside the workshop, but I think it ended up too big. (!) It's supposed to show instructions to build a furnace."
+					description: "I wanted to hang this inside the workshop, but I think it ended up too big. (!) It's supposed to show instructions to build a furnace.",
+					hasTransparentBg: true
 				},
 				{
 					src: "/workshop-icon.png",
-					description: "This is a worktable for a workshop. I think it will be familiar to anyone who has seen a real one too. Can you spot the pencil?"
+					description: "This is a worktable for a workshop. I think it will be familiar to anyone who has seen a real one too. Can you spot the pencil?",
+					hasTransparentBg: true
 				},
 				{
 					src: "/anvil.png",
-					description: "An anvil in pixel art style."
+					description: "An anvil in pixel art style.",
+					hasTransparentBg: true
 				},
 				{
 					src: "/harbor.png",
@@ -187,22 +190,27 @@ export default function ArtGallery() {
 						<p className="gallery-section-description">{section.description}</p>
 					</div>
 					<div className="gallery-grid">
-						{section.images.map((image, imageIndex) => (
-							<div 
-								key={imageIndex} 
-								className="gallery-item"
-								onClick={() => openImageModal(sectionIndex, imageIndex)}
-							>
-								<img 
-									src={image.src} 
-									alt={image.description}
-									loading="lazy"
-								/>
-								<div className="gallery-item-overlay">
-									<p className="gallery-item-description">{image.description}</p>
+						{section.images.map((image, imageIndex) => {
+							const hasTransparentBg = image.hasTransparentBg || false;
+							const style = hasTransparentBg ? {} : { '--bg-image': `url("${image.src}")` };
+							return (
+								<div 
+									key={imageIndex} 
+									className={`gallery-item ${hasTransparentBg ? 'gallery-item--transparent' : ''}`}
+									style={style}
+									onClick={() => openImageModal(sectionIndex, imageIndex)}
+								>
+									<img 
+										src={image.src} 
+										alt={image.description}
+										loading="lazy"
+									/>
+									<div className="gallery-item-overlay">
+										<p className="gallery-item-description">{image.description}</p>
+									</div>
 								</div>
-							</div>
-						))}
+							);
+						})}
 					</div>
 				</div>
 			))}
@@ -233,10 +241,13 @@ export default function ArtGallery() {
 							>
 								&#8249;
 							</button>
-							<img 
-								src={currentImage.src} 
-								alt={currentImage.description}
-							/>
+							<div className="art-modal-image-wrapper">
+								<img 
+									src={currentImage.src} 
+									alt={currentImage.description}
+								/>
+								<p className="copyright copyright--modal">© {new Date().getFullYear()} Andreas Johnsen. All rights reserved.</p>
+							</div>
 							<button 
 								type="button" 
 								className="art-modal-nav art-modal-nav--next" 

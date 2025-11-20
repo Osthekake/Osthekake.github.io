@@ -20,6 +20,9 @@ export default function App() {
 					<Route path="/gallery" element={<ArtGallery />} />
 					<Route path="/about" element={<About />} />
 				</Routes>
+				<footer className="site-footer">
+					<p className="copyright">© {new Date().getFullYear()} Andreas Johnsen. All rights reserved.</p>
+				</footer>
 			</div>
 		</BrowserRouter>
 	);

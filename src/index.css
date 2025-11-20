@@ -502,9 +502,11 @@
     margin: 0;
     width: 100%;
     border-radius: .5rem;
-    overflow: hidden;
+    overflow: visible;
     border: 1px solid rgba(0,0,0,0.08);
     background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-modal-gallery img {
@@ -817,6 +819,27 @@
     background: #f8f9fa;
     border: 1px solid rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(20px) brightness(0.7);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.gallery-item--transparent::before {
+    display: none;
 }
 
 .gallery-item:hover {
@@ -829,6 +852,10 @@
     height: auto;
     display: block;
     transition: opacity 0.2s ease;
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+    max-height: 100%;
 }
 
 .gallery-item img[src*="map.png"]:not([src*="map16"]),
@@ -856,6 +883,7 @@
     padding: 1rem;
     opacity: 0;
     transition: opacity 0.2s ease;
+    z-index: 2;
 }
 
 .gallery-item:hover .gallery-item-overlay {
@@ -949,6 +977,13 @@
     padding: 2rem;
     min-height: 400px;
     background: #f8f9fa;
+}
+
+.art-modal-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
 }
 
 .art-modal-body img {
@@ -1093,6 +1128,47 @@
         text-align: center;
         gap: 1rem;
     }
+}
+
+/* Copyright Notice */
+.site-footer {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.copyright--section {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.copyright--modal {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.art-modal-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.portfolio-gallery-figure {
+    display: flex;
+    flex-direction: column;
 }
 
 
