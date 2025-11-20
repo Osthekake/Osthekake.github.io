@@ -103,6 +103,70 @@ export default function ArtGallery() {
 			]
 		},
 		{
+			name: "Leaf study",
+			description: "Studies of leaves in various styles and techniques.",
+			images: [
+				{
+					src: "/leaf_by_osthekake_df73h9-fullview.jpg",
+					description: "A leaf study."
+				},
+				{
+					src: "/another_leaf_by_osthekake_df73hq-fullview.jpg",
+					description: "Another leaf study."
+				}
+			]
+		},
+		{
+			name: "WoW Fanart",
+			description: "Fan art inspired by World of Warcraft.",
+			images: [
+				{
+					src: "/wow_fanart_type_thing_by_osthekake_d37jycg-fullview.jpg",
+					description: "World of Warcraft fan art."
+				},
+				{
+					src: "/blizzard_by_osthekake_dsh4w2-414w-2x.jpg",
+					description: "Blizzard-themed fan art."
+				}
+			]
+		},
+		{
+			name: "D&D art",
+			description: "Artwork inspired by Dungeons & Dragons.",
+			images: [
+				{
+					src: "/cheer_on_by_osthekake_dh0mdh-375w-2x.jpg",
+					description: "This is my rendition of our party in our D&D game in University."
+				},
+				{
+					src: "/dragons_final_by_osthekake_df72xt-414w-2x.jpg",
+					description: "I drew these dragons with pencil, using a picture in a D&D book as reference. Someone who is familiar with the art, will recognize them. Scanned and digitally coloured."
+				},
+			]
+		},
+		{
+			name: "Fantasy art",
+			description: "Various fantasy-themed artwork.",
+			images: [
+				{
+					src: "/rain_by_osthekake_dyvhh6-375w-2x.jpg",
+					description: "Someone with plate armour, big cloak and sword, out in the rain, looking badass."
+				},
+				{
+					src: "/tower_by_osthekake_dtidse-414w-2x.jpg",
+					description: "A tower on a very tiny island."
+				},
+				{
+					src: "/battoujutsu_by_osthekake_dj7bu7-375w-2x.jpg",
+					description: "Anime inspired action scene."
+				},
+				{
+					src: "/wandering_the_void_by_osthekake_dpldqc-375w-2x.jpg",
+					description: "Wandering the void. It's become something of an avatar for me."
+				}
+			]
+		},
+		{
 			name: "Other Works",
 			description: "Random works of art that you may find fun or interesting.",
 			images: [
