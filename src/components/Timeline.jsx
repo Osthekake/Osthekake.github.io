@@ -1,7 +1,7 @@
 import React from 'react';
 import PortfolioItem from './PortfolioItem.jsx';
 
-export default function Timeline({ items, onSelect }) {
+export default function Timeline({ items, onSelect, hasActiveFilters }) {
 	let lastYear = null;
 	return (
 		<div className="timeline-wrapper">
@@ -35,7 +35,11 @@ export default function Timeline({ items, onSelect }) {
 					);
 				})}
 			</ul>
-			<p className="timeline-note">Older projects have been lost as they were never uploaded to GitHub.</p>
+			<p className="timeline-note">
+				{hasActiveFilters 
+					? "Disable filters to see more entries. Older projects have been lost as they were never uploaded to GitHub."
+					: "Older projects have been lost as they were never uploaded to GitHub."}
+			</p>
 		</div>
 	);
 }
