@@ -19,7 +19,8 @@ export default function PortfolioModal({ item, onClose }) {
 		}
 	};
 
-	const isLinkDead = Boolean(item.linkNote) || !item.href || item.href.trim() === '';
+	const linkNote = item.linkNote
+	const isLinkDead = linkNote === "Link dead"
 	const handleVisitClick = (event) => {
 		if (isLinkDead) {
 			event.preventDefault();
@@ -91,7 +92,7 @@ export default function PortfolioModal({ item, onClose }) {
 					) : null}
 				</div>
 				<div className="portfolio-modal-footer">
-					{isLinkDead ? (<span className="link-dead-note">(Link dead)</span>) : null}
+					{linkNote ? (<span className="link-dead-note">({linkNote})</span>) : null}
 					<a
 						className={`btn ${isLinkDead ? 'btn-outline-secondary portfolio-link-dead' : 'btn-primary'}`}
 						href={item.href}

@@ -17,23 +17,37 @@ export default function GamesPortfolio() {
 	const timelineItems = useMemo(() => (
 		[
             {
-                href: "https://osthekake.github.io/rpg-game/",
+                href: "http://157.90.121.184/",
                 title: "RPG Game",
-				linkNote: true,
                 badges: ["preact", "nodejs", "websocket"],
                 date: "2025-09-18",
                 category: "Other Project",
+				playable: true,
+				linkNote: "no https yet",
+				recommended: true,
                 screenshots: [
                     {
                         src: '/screenshots/RPG Game/0.gif',
-                        alt: "RPG Game gameplay"
+                        alt: "RPG Game, early gameplay"
+                    },
+                    {
+                        src: '/screenshots/RPG Game/rewards.png',
+                        alt: "Collect rewards to get stronger"
+                    },
+                    {
+                        src: '/screenshots/RPG Game/character sheet.png',
+                        alt: "Stat-based rpg mechanics"
                     }
                 ],
-                children: (
+                children: (<>
+					<p className='blurb'>
+						Fantasy rogue-like dungeon crawler game. You play as a hero who defeats enemies across crypts, taverns and ruins. Featuring multiplayer!
+					</p>
                     <p>
                         This is a multiplayer RPG game inspired by online tabletop systems like Roll20. It has a frontend and a backend component, and a shared library between them. Communication between the two is done through websockets.
-                        There is no playable version of the game yet, but I have a working prototype.
+                        The game is very much in development, and constantly changing. No https for the link yet.
                     </p>
+				</>
                 )
             },
             {
@@ -54,13 +68,16 @@ export default function GamesPortfolio() {
                         alt: "Chemist gameplay"
                     }
                 ],
-                children: (
+                children: (<>
+					<p className='blurb'>
+						Fantasy chemistry simulator. Mix chemicals, heat or stir them. Try to puzzle out how to fill the orders.
+					</p>
                     <p>
-                        This is a game that is meant to simulate a sort of simple fantasy chemistry. The player is a chemist, and can mix chemicals to create new ones.
-                        The idea was that you should play as a chemist, who receives orders from patients with various ailments, but that doesn't show up in the game as it is.
-                        You need to deduce what is happening in your mixing bottle based on what you know about the chemicals, and the appearance of the mixture.
+                        This is a game that is meant to simulate a sort of simple fantasy chemistry. You need to deduce what is happening in your mixing bottle based on what you know about the chemicals, and the appearance of the mixture.
+                        The original idea was that you should play as a chemist, who receives orders from patients with various ailments, but that doesn't show up in the game as it is.
                         Graphics are very sparse for this one.
                     </p>
+				</>
                 )
             },
             {
@@ -91,6 +108,9 @@ export default function GamesPortfolio() {
                 ],
                 children: (
                     <>
+						<p className='blurb'>
+							Play as a blacksmith in a world of fantasy rpg tropes.
+						</p>
                         <p>
                             This is a ambitious game that I have been working on for a while. The game is about a blacksmith in a world of rpg logic. The smith is also a bear, and there is a silly story. A lot of cute pixel art.
                         </p>
@@ -113,10 +133,15 @@ export default function GamesPortfolio() {
                         alt: "Angular Navigator gameplay"
                     }
                 ],
-                children: (
+                children: (<>
+					<p className='blurb'>
+						Find the path to the exit in this 10-second puzzler
+					</p>
                     <p>
                         Remake of the game Navigator from my first Ludum Dare entry. This time made with Angular and TypeScript. The animations are done with CSS keyframes.
                     </p>
+				</>
+					
                 )
             },
 			{
@@ -133,12 +158,16 @@ export default function GamesPortfolio() {
 						alt: "Out of Space Inc gameplay"
 					}
 				],
-				children: (
+				children: (<>
+					<p className='blurb'>
+						Moving house? Why not use rocket thrusters on the furniture?
+					</p>
 					<p>
 						Using <a href="https://excaliburjs.com/">excalibur.js</a>, I created this game about moving furniture using rocket technology.
 						I was not happy with the UX here, and I didn't have the time to make a story or make the game the way I wanted. There is no strong tie-in with the theme.
 						I wasted a lot of my time on trying to get click events working properly. Perhaps the framework was not as mature as one might wish.
 					</p>
+				</>
 				)
 			},
 			{
@@ -160,12 +189,16 @@ export default function GamesPortfolio() {
 						alt: "Werewolf night cycle"
 					}
 				],
-				children: (
+				children: (<>
+					<p className='blurb'>
+						Play as a rampaging (or sneaky) werewolf! The goal is to eat or turn everyone, in this web-based puzzle game.
+					</p>
 					<p>After a couple of skipped Ludum Dares, and a few where I tried to participate, but didn't deliver, I made this for LD-35.
 						The goal of this management/puzzle game is to eat or transform all the villagers. The various icons have meanings that 
 						are not at all self-explainatory, and maybe even misleading. There is some help to be had if you click along the top.<br/>
 						This is more or less a standard web-application.
 					</p>
+				</>
 				)
 			},
 			{
@@ -186,29 +219,37 @@ export default function GamesPortfolio() {
 						alt: "Connected Worlds clue interface"
 					}
 				],
-				children: (
+				children: (<>
+					<p className='blurb'>
+						Solve the murder-mystery in an innovative immersive puzzle format.
+					</p>
 					<p>Second collaborative entry for LD-30. Features a faux browser where you as the player will click around the faux internet to gather 
 						clues for a murder investigation. Not particularly self-explainatory. It is possible to gather all the clues, and win,
 						but I forgot how. <br/>
 						Uses the same kind of technology as the previous one, but doesn't have the same intensive render-loop.<br/>
 						The game placed #77 in the innovation (jam) category.
 					</p>
+				</>
 				)
 			},
 			{
 				href: "https://www.dropbox.com/s/1cvhbf9bg6kbqfh/Aurora-release.zip?dl=0",
 				title: "Aurora",
-				linkNote: true,
+				linkNote: "Link dead",
 				currentlyUnavailable: true,
 				badges: ["java", "OpenGL", "GLSL"],
 				date: "2011-12-19",
 				category: "Other Project",
-				children: (
+				children: (<>
+					<p className='blurb'>
+						GLSL Tech demo
+					</p>
 					<p>
 						This is a home-made graphics engine I made to experiment with shaders in GLSL. Originally I planned to make a northern 
 						lights-shader, but in the end I got distracted, and made a bunch of other shaders. <br/>
 						Needs java installed to run. Demo shows a globe with night- and day-sides and a movable light source.
 					</p>
+				</>
 				)
 			},
 			{
@@ -229,45 +270,57 @@ export default function GamesPortfolio() {
 						alt: "Operation Adhesive Surface gameplay"
 					}
 				],
-				children: (
+				children: (<>
+					<p className='blurb'>
+						Charming and silly adventure style game.
+					</p>
 					<p>My first collaborative Ludum Dare entry, for LD-29. Programming, concept, rough story and art by me.
 						Use the keyboard arrows to move, and enter to select things. This is a small puzzle-adventure game, 
 						made with html and javascript. Images are rendered to canvas, and the game is very poorly optimized. 
 						It might cause your browser to use a lot of cpu.
 					</p>
+				</>
 				)
 			},
 			{
 				href: "http://ludumdare.com/compo/ludum-dare-28/?action=preview&uid=25639",
 				title: "A boy and his rock",
 				theme: "You only get one",
-				linkNote: true,
+				linkNote: "Link dead",
 				currentlyUnavailable: true,
 				badges: ["java", "gimp"],
 				date: "2013-12-15",
 				category: "Ludum Dare",
-				children: (
+				children: (<>
+					<p className='blurb'>
+						A platformer where you get a single rock as your weapon. Better go pick that up again!
+					</p>
 					<p>My second Ludum Dare entry, for LD-28. Requires that you download a jar and run locally. <br/>
 						You must have java installed in order to play. The game is made using some of the code from the previous game.
 						I discovered that platform mechanics are more difficult than you would think.
 					</p>
+				</>
 				)
 			},
 			{
 				href: "http://ludumdare.com/compo/ludum-dare-27/?action=preview&uid=25639",
 				title: "Navigator",
 				theme: "10 seconds",
-				linkNote: true,
+				linkNote: "Link dead",
 				currentlyUnavailable: true,
 				badges: ["java", "gimp"],
 				date: "2013-08-25",
 				category: "Ludum Dare",
-				children: (
+				children: (<>
+					<p className='blurb'>
+						Find the path to the exit in this 10-second puzzler
+					</p>
 					<p>My first ever Ludum Dare entry, for LD-27. Requires that you download a jar and run locally. <br/>
 						You must have java installed in order to play. The game is created entirely from scratch by me, 
 						using nothing but the Java SDK.
 						The idea for this game was pretty good, and I later recreated it as a pure javascript game in 2022.
 					</p>
+				</>
 				)
 			},
 			{
@@ -307,7 +360,7 @@ export default function GamesPortfolio() {
 			{
 				href: "",
 				title: "RTS Game",
-				linkNote: true,
+				linkNote: "Link dead",
 				badges: ["react", "typescript"],
 				date: "2023-06-20",
 				category: "Other Project",
@@ -324,7 +377,7 @@ export default function GamesPortfolio() {
 			{
 				href: "",
 				title: "Map Generator",
-				linkNote: true,
+				linkNote: "Link dead",
 				badges: ["Scala"],
 				date: "2021-04-07",
 				category: "Other Project",
@@ -352,17 +405,21 @@ export default function GamesPortfolio() {
 						alt: "Rotating hexes game board"
 					}
 				],
-				children: (
+				children: (<>
+					<p className='blurb'>
+						Match 3 or more, and try to beat the highscore!
+					</p>
 					<p>This was made after I heard an idea someone had for a game with hexes and some sort of math problems. 
 						I thought of a better idea in my humble opinion, and this is the result of that. Created with html and javascript. 
 						Graphics are rendered on canvas, and animations are timed and programmed by hand.
 					</p>
+				</>
 				)
 			},
 			{
 				href: "https://brage.bibsys.no/xmlui/bitstream/handle/11250/252480/440517_ATTACHMENT01.zip?sequence=2&isAllowed=y",
 				title: "Pythia",
-				linkNote: true,
+				linkNote: "Link dead",
 				badges: ["java", "python", "jython"],
 				date: "2010-06-01",
 				category: "Other Project",
@@ -380,10 +437,14 @@ export default function GamesPortfolio() {
 						alt: "Pythia gameplay"
 					}
 				],
-				children: (
+				children: (<>
+					<p className='blurb'>
+						Learn python programming through gaming!
+					</p>
 					<p>My master thesis. Collaboration with another student. 
 						This is a game where you have to program Python in order to progress.
 					</p>
+				</>
 				)
 			}
 		].sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -400,7 +461,7 @@ export default function GamesPortfolio() {
 		}
 
 		return timelineItems.filter(item => {
-			const isLinkDead = Boolean(item.linkNote) || !item.href || item.href.trim() === '';
+			const isLinkDead = item.linkNote === "Link dead"
 			const hasScreenshotOnly = isLinkDead && !item.currentlyUnavailable;
 
 			// If any filter is active, the item must match at least one active filter
