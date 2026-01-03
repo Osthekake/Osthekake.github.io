@@ -25,6 +25,7 @@ export default function GamesPortfolio() {
 				playable: true,
 				linkNote: "no https yet",
 				recommended: true,
+				titleImage: '/screenshots/RPG Game/rewards.png',
                 screenshots: [
                     {
                         src: '/screenshots/RPG Game/0.gif',
@@ -58,6 +59,7 @@ export default function GamesPortfolio() {
                 category: "Other Project",
                 recommended: true,
                 playable: true,
+				titleImage: '/screenshots/Chemist/1.png',
                 screenshots: [
                     {
                         src: '/screenshots/Chemist/0.png',
@@ -88,6 +90,7 @@ export default function GamesPortfolio() {
                 category: "Other Project",
                 recommended: true,
                 playable: true,
+				titleImage: 'Town.png',
                 screenshots: [
                     {
                         src: '/screenshots/Bear Smith/0.png',
@@ -127,6 +130,7 @@ export default function GamesPortfolio() {
                 date: "2022-06-20",
                 category: "Other Project",
                 playable: true,
+				titleImage: '/screenshots/Navigator Remake/0.png',
                 screenshots: [
                     {
                         src: '/screenshots/Navigator Remake/0.png',
@@ -152,6 +156,7 @@ export default function GamesPortfolio() {
 				date: "2018-08-13",
 				category: "Ludum Dare",
                 playable: true,
+				titleImage: '/screenshots/Out of space/0.png',
 				screenshots: [
 					{
 						src: '/screenshots/Out of space/0.png',
@@ -179,6 +184,7 @@ export default function GamesPortfolio() {
 				category: "Ludum Dare",
 				recommended: true,
 				playable: true,
+				titleImage: '/screenshots/Werewolf/1.png',
 				screenshots: [
 					{
 						src: '/screenshots/Werewolf/0.png',
@@ -209,6 +215,7 @@ export default function GamesPortfolio() {
 				badges: ["html", "javascript", "gimp", "git"],
 				date: "2014-08-25",
 				category: "Ludum Dare",
+				titleImage: '/screenshots/Connected worlds/0.png',
 				screenshots: [
 					{
 						src: '/screenshots/Connected worlds/0.png',
@@ -260,6 +267,7 @@ export default function GamesPortfolio() {
 				badges: ["html", "javascript", "gimp", "git"],
 				date: "2014-04-28",
 				category: "Ludum Dare",
+				titleImage: '/screenshots/Adhesive Surface/0.png',
 				screenshots: [
 					{
 						src: '/screenshots/Adhesive Surface/0.png',
@@ -330,6 +338,7 @@ export default function GamesPortfolio() {
 				date: "2024-09-06",
 				category: "Other Project",
 				lowEffort: true,
+				titleImage: '/screenshots/Hiscore/0.png',
 				children: (
 					<p>A retro highscore table based on a json file. Created for Funktive stand at TDC 2024.</p>
 				),
@@ -347,6 +356,7 @@ export default function GamesPortfolio() {
 				date: "2025-04-18",
 				category: "Other Project",
 				lowEffort: true,
+				titleImage: '/screenshots/Xord/0.png',
 				children: (
 					<p>Created a crossword for a scavenger hunt for niece and nephews. The whole thing was made in an evening.</p>
 				),
@@ -364,6 +374,7 @@ export default function GamesPortfolio() {
 				badges: ["react", "typescript"],
 				date: "2023-06-20",
 				category: "Other Project",
+				titleImage: '/screenshots/RTS Game/0.png',
 				children: (
 					<p>Prototype of a RTS game. Made with React and TypeScript. The game features procedurally generated maps. Never got as far as to actually work on the concept I had in mind.</p>
 				),
@@ -381,6 +392,7 @@ export default function GamesPortfolio() {
 				badges: ["Scala"],
 				date: "2021-04-07",
 				category: "Other Project",
+				titleImage: '/screenshots/Orders Game/0.png',
 				children: (
 					<p>Generated height maps with humidity and elevation. Features rivers and lakes, and a primitive lighting system.</p>
 				),
@@ -399,6 +411,7 @@ export default function GamesPortfolio() {
 				recommended: true,
 				playable: true,
 				category: "Other Project",
+				titleImage: '/screenshots/Rotating Hexes/0.png',
 				screenshots: [
 					{
 						src: '/screenshots/Rotating Hexes/0.png',
@@ -423,6 +436,7 @@ export default function GamesPortfolio() {
 				badges: ["java", "python", "jython"],
 				date: "2010-06-01",
 				category: "Other Project",
+				titleImage: '/screenshots/Pythia/1.png',
 				screenshots: [
 					{
 						src: '/screenshots/Pythia/0.png',

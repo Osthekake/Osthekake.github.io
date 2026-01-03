@@ -27,6 +27,7 @@ export default function Timeline({ items, onSelect, hasActiveFilters }) {
 								playable={item.playable}
 								currentlyUnavailable={item.currentlyUnavailable}
 								lowEffort={item.lowEffort}
+								titleImage={item.titleImage}
 								onSelect={onSelect ? () => onSelect(item) : undefined}
 							>
 								{item.children}

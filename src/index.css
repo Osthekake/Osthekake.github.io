@@ -139,16 +139,26 @@
 .timeline-item {
     position: relative;
     margin-bottom: 1rem;
-    background: #fff;
     border: 1px solid rgba(0,0,0,0.075);
     border-radius: .5rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    padding: 1rem 1.25rem;
+    padding: 1.5rem;
     margin-left: 2rem; /* offset from rail */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Remove bullet dots; use a subtle connector instead */
-.timeline-item:before { content: none; }
+.timeline-item-content {
+    background: white;
+    box-shadow: 0 0 20px 20px white;
+    transition: box-shadow 0.5s;
+}
+.timeline-item-content:hover {
+    background: white;
+    box-shadow: 0 0 10px 15px white;
+}
+
+/* Connector line to timeline rail */
 .timeline-item:after {
     content: "";
     position: absolute;
@@ -157,6 +167,7 @@
     width: 1.125rem;
     height: 2px;
     background: rgba(0,0,0,0.1);
+    z-index: 2;
 }
 
 /* Year separators */
