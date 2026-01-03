@@ -141,7 +141,7 @@
     margin-bottom: 1rem;
     border: 1px solid rgba(0,0,0,0.075);
     border-radius: .5rem;
-    padding: 1.5rem;
+    padding: 1.8rem;
     margin-left: 2rem; /* offset from rail */
     background-size: cover;
     background-position: center;
@@ -1191,6 +1191,255 @@
     font-size: large;
     font-style: italic;
     max-width: 70%;
+}
+
+/* Game Title Styles */
+@font-face {
+    font-family: 'BreatheFire';
+    src: url('/fonts/BreatheFire-65pg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AncientModernTales';
+    src: url('/fonts/AncientModernTales-a7Po.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Elemental';
+    src: url('/fonts/Elemental-lg5B0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Starcruiser';
+    src: url('/fonts/Starcruiser-Ewe4.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FogleHunter';
+    src: url('/fonts/FogleHunterRegular-gJ15.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SillyGames';
+    src: url('/fonts/SillyGamesRegular-eDGx.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Werewolf';
+    src: url('/fonts/Werewolf-VzGw.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VictorianParlor';
+    src: url('/fonts/VictorianParlorVintageAlternateFree-Yoe4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hexagon';
+    src: url('/fonts/Hexagon-2EGe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RocketPop';
+    src: url('/fonts/RocketPopExpanded-1WW4.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spartacus';
+    src: url('/fonts/Spartacus-KVdLp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.game-title-rpg {
+    font-family: 'BreatheFire', serif !important;
+    color: #8b4513 !important;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(218, 165, 32, 0.3), 1px 1px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.02em;
+}
+
+.game-title-rpg:hover {
+    color: #a0522d !important;
+    text-shadow: 2px 2px 0px rgba(218, 165, 32, 0.5), 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.game-title-chemist {
+    font-family: 'Elemental', serif !important;
+    color: #2e7d32 !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(76, 175, 80, 0.4), 0px 0px 8px rgba(139, 195, 74, 0.2);
+    font-style: normal;
+}
+
+.game-title-chemist:hover {
+    color: #388e3c !important;
+    text-shadow: 1px 1px 4px rgba(76, 175, 80, 0.6), 0px 0px 10px rgba(139, 195, 74, 0.3);
+}
+
+.game-title-bear-smith {
+    font-family: 'AncientModernTales', serif !important;
+    color: #5d4037 !important;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(255, 152, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.01em;
+}
+
+.game-title-bear-smith:hover {
+    color: #6d4c41 !important;
+    text-shadow: 2px 2px 0px rgba(255, 152, 0, 0.4), 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.game-title-navigator {
+    font-family: 'Starcruiser', sans-serif !important;
+    color: #0288d1 !important;
+    font-weight: normal;
+    text-shadow: 0px 0px 10px rgba(3, 169, 244, 0.6), 0px 0px 20px rgba(3, 169, 244, 0.3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.game-title-navigator:hover {
+    color: #03a9f4 !important;
+    text-shadow: 0px 0px 12px rgba(3, 169, 244, 0.8), 0px 0px 24px rgba(3, 169, 244, 0.4);
+}
+
+.game-title-space {
+    font-family: 'RocketPop', sans-serif !important;
+    color: #283593 !important;
+    font-weight: normal;
+    text-shadow: 0px 0px 8px rgba(92, 107, 192, 0.4), 1px 1px 3px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.03em;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+.game-title-space:hover {
+    color: #303f9f !important;
+    text-shadow: 0px 0px 12px rgba(92, 107, 192, 0.6), 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-title-werewolf {
+    font-family: 'Werewolf', serif !important;
+    color: #b71c1c !important;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15), 0px 0px 6px rgba(244, 67, 54, 0.3);
+    letter-spacing: 0.015em;
+}
+
+.game-title-werewolf:hover {
+    color: #c62828 !important;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(244, 67, 54, 0.5);
+}
+
+.game-title-connected {
+    font-family: 'VictorianParlor', serif !important;
+    color: #6a1b9a !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(156, 39, 176, 0.3), 0px 0px 8px rgba(171, 71, 188, 0.2);
+    font-style: normal;
+}
+
+.game-title-connected:hover {
+    color: #7b1fa2 !important;
+    text-shadow: 1px 1px 4px rgba(156, 39, 176, 0.5), 0px 0px 10px rgba(171, 71, 188, 0.3);
+}
+
+.game-title-adhesive {
+    font-family: 'SillyGames', serif !important;
+    color: #00796b !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 150, 136, 0.3), 0px 0px 6px rgba(77, 182, 172, 0.2);
+}
+
+.game-title-adhesive:hover {
+    color: #00897b !important;
+    text-shadow: 1px 1px 3px rgba(0, 150, 136, 0.5), 0px 0px 8px rgba(77, 182, 172, 0.3);
+}
+
+.game-title-hexes {
+    font-family: 'Hexagon', sans-serif !important;
+    color: #ad1457 !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(233, 30, 99, 0.3), 0px 0px 8px rgba(240, 98, 146, 0.2);
+    letter-spacing: 0.05em;
+}
+
+.game-title-hexes:hover {
+    color: #c2185b !important;
+    text-shadow: 1px 1px 4px rgba(233, 30, 99, 0.5), 0px 0px 10px rgba(240, 98, 146, 0.3);
+}
+
+.game-title-pythia {
+    font-family: 'Spartacus', serif !important;
+    color: #4527a0 !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(103, 58, 183, 0.3), 0px 0px 8px rgba(126, 87, 194, 0.2);
+    font-style: normal;
+}
+
+.game-title-pythia:hover {
+    color: #512da8 !important;
+    text-shadow: 1px 1px 4px rgba(103, 58, 183, 0.5), 0px 0px 10px rgba(126, 87, 194, 0.3);
+}
+
+.game-title-rts {
+    font-family: 'FogleHunter', serif !important;
+    color: #5d4037 !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(121, 85, 72, 0.4), 0px 0px 6px rgba(161, 136, 127, 0.2);
+    letter-spacing: 0.02em;
+}
+
+.game-title-rts:hover {
+    color: #6d4c41 !important;
+    text-shadow: 1px 1px 4px rgba(121, 85, 72, 0.6), 0px 0px 8px rgba(161, 136, 127, 0.3);
+}
+
+.game-title-map-generator {
+    font-family: 'FogleHunter', serif !important;
+    color: #33691e !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(85, 139, 47, 0.4), 0px 0px 6px rgba(139, 195, 74, 0.2);
+    letter-spacing: 0.02em;
+}
+
+.game-title-map-generator:hover {
+    color: #558b2f !important;
+    text-shadow: 1px 1px 4px rgba(85, 139, 47, 0.6), 0px 0px 8px rgba(139, 195, 74, 0.3);
+}
+
+.game-title-boy-rock {
+    font-family: 'SillyGames', serif !important;
+    color: #6d4c41 !important;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(121, 85, 72, 0.3), 0px 0px 6px rgba(161, 136, 127, 0.2);
+    letter-spacing: 0.01em;
+}
+
+.game-title-boy-rock:hover {
+    color: #795548 !important;
+    text-shadow: 1px 1px 4px rgba(121, 85, 72, 0.5), 0px 0px 8px rgba(161, 136, 127, 0.3);
 }
 
 

@@ -26,6 +26,7 @@ export default function GamesPortfolio() {
 				linkNote: "no https yet",
 				recommended: true,
 				titleImage: '/screenshots/RPG Game/rewards.png',
+				titleStyle: 'game-title-rpg',
                 screenshots: [
                     {
                         src: '/screenshots/RPG Game/0.gif',
@@ -60,6 +61,7 @@ export default function GamesPortfolio() {
                 recommended: true,
                 playable: true,
 				titleImage: '/screenshots/Chemist/1.png',
+				titleStyle: 'game-title-chemist',
                 screenshots: [
                     {
                         src: '/screenshots/Chemist/0.png',
@@ -91,6 +93,7 @@ export default function GamesPortfolio() {
                 recommended: true,
                 playable: true,
 				titleImage: 'Town.png',
+				titleStyle: 'game-title-bear-smith',
                 screenshots: [
                     {
                         src: '/screenshots/Bear Smith/0.png',
@@ -131,6 +134,7 @@ export default function GamesPortfolio() {
                 category: "Other Project",
                 playable: true,
 				titleImage: '/screenshots/Navigator Remake/0.png',
+				titleStyle: 'game-title-navigator',
                 screenshots: [
                     {
                         src: '/screenshots/Navigator Remake/0.png',
@@ -157,6 +161,7 @@ export default function GamesPortfolio() {
 				category: "Ludum Dare",
                 playable: true,
 				titleImage: '/screenshots/Out of space/0.png',
+				titleStyle: 'game-title-space',
 				screenshots: [
 					{
 						src: '/screenshots/Out of space/0.png',
@@ -185,6 +190,7 @@ export default function GamesPortfolio() {
 				recommended: true,
 				playable: true,
 				titleImage: '/screenshots/Werewolf/1.png',
+				titleStyle: 'game-title-werewolf',
 				screenshots: [
 					{
 						src: '/screenshots/Werewolf/0.png',
@@ -216,6 +222,7 @@ export default function GamesPortfolio() {
 				date: "2014-08-25",
 				category: "Ludum Dare",
 				titleImage: '/screenshots/Connected worlds/0.png',
+				titleStyle: 'game-title-connected',
 				screenshots: [
 					{
 						src: '/screenshots/Connected worlds/0.png',
@@ -268,6 +275,7 @@ export default function GamesPortfolio() {
 				date: "2014-04-28",
 				category: "Ludum Dare",
 				titleImage: '/screenshots/Adhesive Surface/0.png',
+				titleStyle: 'game-title-adhesive',
 				screenshots: [
 					{
 						src: '/screenshots/Adhesive Surface/0.png',
@@ -299,6 +307,7 @@ export default function GamesPortfolio() {
 				badges: ["java", "gimp"],
 				date: "2013-12-15",
 				category: "Ludum Dare",
+				titleStyle: 'game-title-boy-rock',
 				children: (<>
 					<p className='blurb'>
 						A platformer where you get a single rock as your weapon. Better go pick that up again!
@@ -375,6 +384,7 @@ export default function GamesPortfolio() {
 				date: "2023-06-20",
 				category: "Other Project",
 				titleImage: '/screenshots/RTS Game/0.png',
+				titleStyle: 'game-title-rts',
 				children: (
 					<p>Prototype of a RTS game. Made with React and TypeScript. The game features procedurally generated maps. Never got as far as to actually work on the concept I had in mind.</p>
 				),
@@ -393,6 +403,7 @@ export default function GamesPortfolio() {
 				date: "2021-04-07",
 				category: "Other Project",
 				titleImage: '/screenshots/Orders Game/0.png',
+				titleStyle: 'game-title-map-generator',
 				children: (
 					<p>Generated height maps with humidity and elevation. Features rivers and lakes, and a primitive lighting system.</p>
 				),
@@ -405,13 +416,14 @@ export default function GamesPortfolio() {
 			},
 			{
 				href: "http://osthekake.github.io/HexGame/main",
-				title: "Rotating hexes game",
+				title: "rotating hexes game",
 				badges: ["html", "javaScript"],
 				date: "2015-05-01",
 				recommended: true,
 				playable: true,
 				category: "Other Project",
 				titleImage: '/screenshots/Rotating Hexes/0.png',
+				titleStyle: 'game-title-hexes',
 				screenshots: [
 					{
 						src: '/screenshots/Rotating Hexes/0.png',
@@ -437,6 +449,7 @@ export default function GamesPortfolio() {
 				date: "2010-06-01",
 				category: "Other Project",
 				titleImage: '/screenshots/Pythia/1.png',
+				titleStyle: 'game-title-pythia',
 				screenshots: [
 					{
 						src: '/screenshots/Pythia/0.png',

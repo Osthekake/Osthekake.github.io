@@ -2,7 +2,7 @@
 import LudumDareTheme from './LudumDareTheme.jsx';
 import StatusPill from './StatusPill.jsx';
  
-export default function PortfolioItem({ href, title, theme, linkNote, badges = [], date, category, children, onSelect, recommended, playable, currentlyUnavailable, lowEffort, titleImage }) {
+export default function PortfolioItem({ href, title, theme, linkNote, badges = [], date, category, children, onSelect, recommended, playable, currentlyUnavailable, lowEffort, titleImage, titleStyle }) {
 	const isLinkDead = Boolean(linkNote) || !href || href.trim() === '';
 
 	const handleItemClick = (event) => {
@@ -33,7 +33,7 @@ export default function PortfolioItem({ href, title, theme, linkNote, badges = [
 			<div className="timeline-item-content">
 				<div className="timeline-header">
 					<div className="timeline-title">
-						<h3><a href={href} onClick={handleItemClick}>{title}</a></h3>
+						<h3><a href={href} onClick={handleItemClick} className={titleStyle}>{title}</a></h3>
 						<StatusPill type="recommended">{recommended ? 'Recommended' : null}</StatusPill>
 						<StatusPill type="playable">{playable ? 'Playable' : null}</StatusPill>
 						<StatusPill type="low-effort">{lowEffort ? 'Low Effort' : null}</StatusPill>

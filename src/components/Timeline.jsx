@@ -28,6 +28,7 @@ export default function Timeline({ items, onSelect, hasActiveFilters }) {
 								currentlyUnavailable={item.currentlyUnavailable}
 								lowEffort={item.lowEffort}
 								titleImage={item.titleImage}
+								titleStyle={item.titleStyle}
 								onSelect={onSelect ? () => onSelect(item) : undefined}
 							>
 								{item.children}
@@ -37,12 +38,11 @@ export default function Timeline({ items, onSelect, hasActiveFilters }) {
 				})}
 			</ul>
 			<p className="timeline-note">
-				{hasActiveFilters 
+				{hasActiveFilters
 					? "Disable filters to see more entries. Older projects have been lost as they were never uploaded to GitHub."
 					: "Older projects have been lost as they were never uploaded to GitHub."}
 			</p>
 		</div>
 	);
 }
-
 
