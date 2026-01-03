@@ -415,7 +415,7 @@ export default function GamesPortfolio() {
 				],
 			},
 			{
-				href: "http://osthekake.github.io/HexGame/main",
+				href: "http://osthekake.github.io/HexGame/",
 				title: "rotating hexes game",
 				badges: ["html", "javaScript"],
 				date: "2015-05-01",
