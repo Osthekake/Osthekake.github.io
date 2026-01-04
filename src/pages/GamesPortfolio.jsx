@@ -417,17 +417,21 @@ export default function GamesPortfolio() {
 			{
 				href: "http://osthekake.github.io/HexGame/",
 				title: "rotating hexes game",
-				badges: ["html", "javaScript"],
+				badges: ["html", "javaScript", "Three.js"],
 				date: "2015-05-01",
 				recommended: true,
 				playable: true,
 				category: "Other Project",
-				titleImage: '/screenshots/Rotating Hexes/0.png',
+				titleImage: '/screenshots/Rotating Hexes/Screenshot From 2025-12-23 15-25-48.png',
 				titleStyle: 'game-title-hexes',
 				screenshots: [
 					{
-						src: '/screenshots/Rotating Hexes/0.png',
+						src: '/screenshots/Rotating Hexes/Screenshot From 2025-12-23 15-25-48.png',
 						alt: "Rotating hexes game board"
+					},
+					{
+						src: '/screenshots/Rotating Hexes/Screenshot From 2026-01-04 09-58-59.png',
+						alt: "Rotating hexes gameplay"
 					}
 				],
 				children: (<>

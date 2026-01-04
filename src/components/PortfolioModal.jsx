@@ -44,7 +44,7 @@ export default function PortfolioModal({ item, onClose }) {
 			<div className="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="portfolio-modal-title">
 				<header className="portfolio-modal-header">
 					<div className="portfolio-modal-header-content">
-						<h2 id="portfolio-modal-title">{item.title}</h2>
+						<h2 id="portfolio-modal-title" className={item.titleStyle}>{item.title}</h2>
 						<div className="portfolio-modal-meta">
 							<LudumDareTheme theme={item.theme} />
 							<StatusPill type="recommended">{item.recommended ? 'Recommended' : null}</StatusPill>
