@@ -1116,29 +1116,55 @@
 }
 
 /* About Page */
-.about-header {
+.about-hero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.about-hero-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border: 4px solid #fff;
+}
+
+.about-signature {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.about-header h2 {
-    margin: 0;
-    flex: 1;
-}
-
-.about-avatar {
+.about-signature-avatar {
     flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.about-signature-text {
     margin: 0;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #495057;
+    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-    .about-header {
+    .about-hero-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-signature {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
     }
 }
 
