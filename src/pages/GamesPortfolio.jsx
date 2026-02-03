@@ -70,6 +70,18 @@ export default function GamesPortfolio() {
                     {
                         src: '/screenshots/Chemist/1.png',
                         alt: "Chemist gameplay"
+                    },
+                    {
+                        src: '/screenshots/Chemist/orders.png',
+                        alt: "Order selection screen with simple and advanced chemistry orders"
+                    },
+                    {
+                        src: '/screenshots/Chemist/flask.png',
+                        alt: "Mixing flask being heated on a burner"
+                    },
+                    {
+                        src: '/screenshots/Chemist/failed.png',
+                        alt: "Order failed screen showing a destroyed flask and mixture contents"
                     }
                 ],
                 children: (<>
