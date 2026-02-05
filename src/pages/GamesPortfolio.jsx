@@ -46,7 +46,7 @@ export default function GamesPortfolio() {
 					</p>
                     <p>
                         This is a multiplayer RPG game inspired by online tabletop systems like Roll20. It has a frontend and a backend component, and a shared library between them. Communication between the two is done through websockets.
-                        The game is very much in development, and constantly changing. No https for the link yet.
+                        The game is very much in development, and constantly changing.
                     </p>
 				</>
                 )
