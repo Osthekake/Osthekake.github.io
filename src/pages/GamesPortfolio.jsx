@@ -17,13 +17,12 @@ export default function GamesPortfolio() {
 	const timelineItems = useMemo(() => (
 		[
             {
-                href: "http://157.90.121.184/",
+                href: "https://osthekake.com/rpg-game/",
                 title: "RPG Game",
                 badges: ["preact", "nodejs", "websocket"],
                 date: "2025-09-18",
                 category: "Other Project",
 				playable: true,
-				linkNote: "no https yet",
 				recommended: true,
 				titleImage: '/screenshots/RPG Game/rewards.png',
 				titleStyle: 'game-title-rpg',
@@ -427,7 +426,7 @@ export default function GamesPortfolio() {
 				],
 			},
 			{
-				href: "http://osthekake.github.io/HexGame/",
+				href: "https://osthekake.com/HexGame/",
 				title: "rotating hexes game",
 				badges: ["html", "javaScript", "Three.js"],
 				date: "2015-05-01",
