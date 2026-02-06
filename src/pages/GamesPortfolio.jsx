@@ -52,7 +52,7 @@ export default function GamesPortfolio() {
                 )
             },
             {
-                href: "https://osthekake.github.io/chemist/",
+                href: "https://osthekake.com/chemist/",
                 title: "Chemist",
                 badges: ["react", "typescript", "robot3"],
                 date: "2024-09-15",
