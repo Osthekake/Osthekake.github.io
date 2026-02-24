@@ -121,6 +121,7 @@
 .timeline {
     position: relative;
     margin: 2rem 0;
+    margin-right: 5px;
     padding-left: 0; /* flush; items will offset themselves */
     list-style: none; /* remove default bullets */
 }
@@ -139,13 +140,19 @@
 .timeline-item {
     position: relative;
     margin-bottom: 1rem;
-    border: 1px solid rgba(0,0,0,0.075);
     border-radius: .5rem;
     padding: 1.8rem;
     margin-left: 2rem; /* offset from rail */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.80);
+    transition: box-shadow 0.2s ease;
+    outline: solid 2px rgb(126, 126, 126);
+}
+
+.timeline-item[role="button"] {
+    cursor: pointer;
 }
 
 .timeline-item-content {
@@ -266,7 +273,7 @@
     padding: 1.5rem;
     background: #f8f9fa;
     border-radius: 0.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.075);
+    outline: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 .timeline-filter-label {
@@ -1469,3 +1476,6 @@
 }
 
 
+.list-group-item {
+    border: none;
+}
