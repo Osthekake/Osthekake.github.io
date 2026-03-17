@@ -17,6 +17,33 @@ export default function GamesPortfolio() {
 	const timelineItems = useMemo(() => (
 		[
             {
+                href: "https://osthekake.github.io/forge-in-the-woods/",
+                title: "Forge in the Woods",
+                badges: ["react", "typescript", "vite"],
+                date: "2026-03-17",
+                category: "Other Project",
+                playable: true,
+                recommended: true,
+                titleImage: '/screenshots/Forge in the Woods/0.png',
+                screenshots: [
+                    {
+                        src: '/screenshots/Forge in the Woods/0.png',
+                        alt: "Forge in the Woods gameplay"
+                    }
+                ],
+                children: (<>
+                    <p className='blurb'>
+                        You are the village blacksmith. Buy trash from heroes, craft items, grow your economy.
+                    </p>
+                    <p>
+                        A browser-based blacksmith management game. Adventuring heroes stop by between expeditions to sell their loot and spend gold.
+                        Buy their trash, craft better items, research upgrades, and post quests to get the materials you need.
+                        Survive as long as possible without going broke.
+                    </p>
+                </>
+                )
+            },
+            {
                 href: "https://osthekake.com/rpg-game/",
                 title: "RPG Game",
                 badges: ["preact", "nodejs", "websocket"],
